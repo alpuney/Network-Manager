@@ -11,7 +11,8 @@ import SwiftUI
 struct Network_ManagerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let monitor = NetworkMonitor()
+            ContentView().environmentObject(monitor)
         }
     }
 }
